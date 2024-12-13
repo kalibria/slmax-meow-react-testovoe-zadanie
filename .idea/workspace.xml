@@ -5,16 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acbc7278-5c67-4cfc-b52d-613be93b6e3b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.stylelintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/page.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/styles/fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/styles/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/card/Card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/card/card.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/header/header.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/product/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/product/page.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/product/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/types/types.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -53,13 +58,14 @@
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/Mary/.nvm/versions/node/v18.18.2/lib/node_modules/prettier",
-    "settings.editor.selected.configurable": "configurable.stylesheets.stylelint",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "/Users/Mary/Documents/Projects/slmax-meow-react-testovoe-zadanie/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/types" />
       <recent name="$PROJECT_DIR$/app/styles" />
     </key>
   </component>
@@ -98,6 +104,7 @@
       <workItem from="1734028803717" duration="3545000" />
       <workItem from="1734072990036" duration="899000" />
       <workItem from="1734073926835" duration="2244000" />
+      <workItem from="1734076275705" duration="11270000" />
     </task>
     <servers />
   </component>

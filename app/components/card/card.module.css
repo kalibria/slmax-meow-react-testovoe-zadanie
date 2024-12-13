@@ -1,0 +1,13 @@
+.card {
+    width: 540px;
+    height: 540px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    border: 3px solid indigo;
+}
