@@ -39,10 +39,11 @@ button {
 a {
     cursor: pointer;
     text-decoration: none;
+    color: #211d1d;
 }
 
 a:visited {
-    color: inherit;
+    color: indigo;
 }
 
 body {

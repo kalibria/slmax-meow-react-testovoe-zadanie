@@ -16,15 +16,16 @@ export default async function Home() {
     .catch((error) => console.log(error));
 
   const itemsCards = products.map((product) => (
-    <Card
-      key={product.id}
-      product={{
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        img: product.img,
-      }}
-    />
+    <div key={product.id} className={styles.cardWrapper}>
+      <Card
+        product={{
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          img: product.img,
+        }}
+      />
+    </div>
   ));
 
   return (

@@ -3,4 +3,5 @@ export type ProductInfo = {
   img: string;
   price: number;
   name: string;
+  description?: string;
 };

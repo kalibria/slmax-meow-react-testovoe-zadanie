@@ -1,5 +1,7 @@
 import Card from '@/app/components/card/Card';
 import { ProductInfo } from '@/app/types/types';
+import styles from './page.module.css';
+import Button from '@/app/components/button/Button';
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -31,13 +33,22 @@ export default async function Page({
     .catch((error) => console.log(error));
 
   return (
-    <Card
-      product={{
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        img: product.img,
-      }}
-    />
+    <div className={styles.pageWrapper}>
+      <Button title={'Add To Cart'} />
+      <div className={styles.cardWrapper}>
+        <Card
+          product={{
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            img: product.img,
+          }}
+        />
+      </div>
+
+      <div className={styles.description}>
+        Product description: {product.description}
+      </div>
+    </div>
   );
 }
