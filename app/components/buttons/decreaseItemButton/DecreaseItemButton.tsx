@@ -8,6 +8,10 @@ type Props = {
 };
 
 export default function DecreaseItemButton({ product }: Props) {
+  // const handleClick = async () => {
+  //   await decreaseQuantityAction(product);
+  //   // await getItemTotalPriceAction(product);
+  // };
   return (
     <button onClick={() => decreaseQuantityAction(product)}>
       <DeleteIcon />

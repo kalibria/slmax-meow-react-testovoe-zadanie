@@ -34,7 +34,11 @@ export default async function Page({
 
   return (
     <div className={styles.pageWrapper}>
-      <AddToCartButton product={product} />
+      <AddToCartButton
+        product={product}
+        title={'Add To Cart'}
+        className={styles.button}
+      />
       <div className={styles.cardWrapper}>
         <Card
           product={{

@@ -15,15 +15,18 @@ export async function addItemAction(product: CartItem) {
 }
 
 export async function incrementItemAction(product: CartItem) {
-  return globalThis.backendCart.reduce((accum: CartItem[], cartItem) => {
-    if (cartItem.id === product.id) {
-      cartItem.quantity += 1;
-      cartItem.price = cartItem.price * cartItem.quantity;
-      accum.push(cartItem);
-    } else accum.push(product);
-    revalidatePath('/cart');
-    return accum;
-  }, []);
+  globalThis.backendCart = globalThis.backendCart.reduce(
+    (accum: CartItem[], cartItem) => {
+      if (cartItem.id === product.id) {
+        cartItem.quantity += 1;
+        accum.push(cartItem);
+      } else accum.push(cartItem);
+
+      return accum;
+    },
+    []
+  );
+  revalidatePath('/cart');
 }
 
 export async function removeFromCartAction(item: CartItem) {
@@ -33,16 +36,28 @@ export async function removeFromCartAction(item: CartItem) {
 }
 
 export async function decreaseQuantityAction(item: CartItem) {
-  return globalThis.backendCart.reduce((accum: CartItem[], cartItem) => {
-    if (cartItem.id === item.id) {
-      if (cartItem.quantity === 1) {
-        removeFromCartAction(cartItem);
-      }
-      cartItem.quantity = cartItem.quantity - 1;
-      cartItem.price = cartItem.price * cartItem.quantity;
-      accum.push(cartItem);
-    } else accum.push(item);
-    revalidatePath('/cart');
+  globalThis.backendCart = globalThis.backendCart.reduce(
+    (accum: CartItem[], cartItem) => {
+      if (cartItem.id === item.id) {
+        if (cartItem.quantity === 1) {
+          return accum;
+        }
+        cartItem.quantity = cartItem.quantity - 1;
+        accum.push(cartItem);
+      } else accum.push(cartItem);
+
+      return accum;
+    },
+    []
+  );
+
+  revalidatePath('/cart');
+}
+
+export async function getTotalAction() {
+  const cartItems = globalThis.backendCart;
+  return cartItems.reduce((accum, item) => {
+    accum += +item.price * item.quantity;
     return accum;
-  }, []);
+  }, 0);
 }

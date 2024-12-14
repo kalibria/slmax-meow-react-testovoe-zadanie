@@ -1,15 +1,22 @@
 'use client';
-import styles from './button.module.css';
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  title: string;
+  title?: string;
+  children?: ReactNode;
+  className?: string;
 }
 
-export default function Button({ title, ...props }: Props) {
+export default function Button({
+  title,
+  children,
+  className,
+  ...props
+}: Props) {
   return (
-    <button className={styles.button} {...props}>
+    <button className={className} {...props}>
       {title}
+      {children}
     </button>
   );
 }

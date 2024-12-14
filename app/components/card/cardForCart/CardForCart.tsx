@@ -16,6 +16,7 @@ export default function CardForCart({ product }: Props) {
       <div className={styles.infoWrapper}>
         <IncreaseDecreaseItem product={product} />
         <div>{product.price} $</div>
+        <div>{product.name} </div>
       </div>
     </div>
   );

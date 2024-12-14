@@ -7,12 +7,21 @@ import {
   getItemsAction,
   incrementItemAction,
 } from '@/app/actions/actions';
+import { ReactNode } from 'react';
 
 type Props = {
+  title?: string;
   product: ProductInfo;
+  children?: ReactNode;
+  className?: string;
 };
 
-export default function AddToCartButton({ product }: Props) {
+export default function AddToCartButton({
+  product,
+  children,
+  title,
+  className,
+}: Props) {
   const addToCart = async (product: ProductInfo) => {
     const cartItems = await getItemsAction();
     const productInCart = cartItems.find((item) => item.id === product.id);
@@ -25,5 +34,13 @@ export default function AddToCartButton({ product }: Props) {
     }
   };
 
-  return <Button title={'Add To Cart'} onClick={() => addToCart(product)} />;
+  return (
+    <Button
+      title={title}
+      onClick={() => addToCart(product)}
+      className={className}
+    >
+      {children}
+    </Button>
+  );
 }

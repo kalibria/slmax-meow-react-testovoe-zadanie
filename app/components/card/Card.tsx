@@ -15,6 +15,7 @@ export default function Card({ product }: Props) {
       <Image src={img} alt={name} width={300} height={300} />
       <div>Price {price} $</div>
       <div>Label {name}</div>
+      <div>id: {id}</div>
     </Link>
   );
 }
