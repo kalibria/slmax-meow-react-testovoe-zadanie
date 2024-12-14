@@ -17,14 +17,7 @@ export default async function Home() {
 
   const itemsCards = products.map((product) => (
     <div key={product.id} className={styles.cardWrapper}>
-      <Card
-        product={{
-          id: product.id,
-          name: product.name,
-          price: product.price,
-          img: product.img,
-        }}
-      />
+      <Card product={product} />
     </div>
   ));
 
