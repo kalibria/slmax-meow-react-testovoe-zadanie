@@ -5,16 +5,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
 }
-.cardWrapper {
+.imageWrapper {
     border: 1px solid grey;
     border-radius: 15px;
     width: 540px;
 }
 
-.cardWrapper:hover {
+.imageWrapper:hover {
     border: 3px solid indigo;
 }
 
-.cardWrapper:hover img {
+.imageWrapper:hover img {
     transform: scale(1.1);
 }

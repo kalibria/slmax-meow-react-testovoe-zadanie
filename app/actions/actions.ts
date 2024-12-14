@@ -18,24 +18,31 @@ export async function incrementItemAction(product: CartItem) {
   return globalThis.backendCart.reduce((accum: CartItem[], cartItem) => {
     if (cartItem.id === product.id) {
       cartItem.quantity += 1;
+      cartItem.price = cartItem.price * cartItem.quantity;
       accum.push(cartItem);
     } else accum.push(product);
+    revalidatePath('/cart');
     return accum;
   }, []);
 }
 
-export async function removeFromCart(item: CartItem) {
+export async function removeFromCartAction(item: CartItem) {
   globalThis.backendCart = globalThis.backendCart.filter(
     (cartItem) => cartItem.id !== item.id
   );
 }
 
-export async function decreaseQuantity(item: CartItem) {
+export async function decreaseQuantityAction(item: CartItem) {
   return globalThis.backendCart.reduce((accum: CartItem[], cartItem) => {
     if (cartItem.id === item.id) {
-      cartItem.quantity -= cartItem.quantity;
+      if (cartItem.quantity === 1) {
+        removeFromCartAction(cartItem);
+      }
+      cartItem.quantity = cartItem.quantity - 1;
+      cartItem.price = cartItem.price * cartItem.quantity;
       accum.push(cartItem);
     } else accum.push(item);
+    revalidatePath('/cart');
     return accum;
   }, []);
 }

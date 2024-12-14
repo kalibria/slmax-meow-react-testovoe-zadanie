@@ -5,22 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acbc7278-5c67-4cfc-b52d-613be93b6e3b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/actions/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/icons/CartIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/cart/CartItems.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/cart/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/buttons/addToCartButton/AddToCartButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/buttons/cartButton/CartButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/buttons/cartButton/cartButton.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/buttons/generalButton/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/icons/AddIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/icons/DeleteIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cart/cartItems.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cart/page.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/buttons/decreaseItemButton/DecreaseItemButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/buttons/increaseItemButton/IncreaseItemButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/card/cardForCart/CardForCart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/card/cardForCart/cardForCart.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/increaseDecreaseItem/IncreaseDecreaseItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/increaseDecreaseItem/increaseDecr.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/button/Button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/button/button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/buttons/generalButton/button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/product/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/product/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/types/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/types.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/actions/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cart/CartItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/cart/CartItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cart/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/cart/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/card/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/card/card.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/product/[id]/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/product/[id]/page.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/Mary/Documents/Projects/slmax-meow-react-testovoe-zadanie",
+    "last_opened_file_path": "/Users/Mary/Documents/Projects/slmax-meow-react-testovoe-zadanie/app/components/buttons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -70,11 +71,16 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components/buttons" />
+      <recent name="$PROJECT_DIR$/app/assets/icons" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components/buttons/addItemButton" />
+      <recent name="$PROJECT_DIR$/app/components/buttons/decreaseItemButton" />
       <recent name="$PROJECT_DIR$/app/components/buttons/generalButton" />
       <recent name="$PROJECT_DIR$/app/components/buttons/addToCartButton" />
       <recent name="$PROJECT_DIR$/app/types" />
-      <recent name="$PROJECT_DIR$/app/styles" />
     </key>
   </component>
   <component name="RunManager">
@@ -112,7 +118,7 @@
       <workItem from="1734028803717" duration="3545000" />
       <workItem from="1734072990036" duration="899000" />
       <workItem from="1734073926835" duration="2244000" />
-      <workItem from="1734076275705" duration="38011000" />
+      <workItem from="1734076275705" duration="44177000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,9 @@
+.buttonsWrapper{
+    border: 1px solid #56217c;
+    border-radius: 15px;
+    padding: 10px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

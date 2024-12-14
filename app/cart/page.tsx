@@ -1,9 +1,10 @@
 import CartItems from '@/app/cart/CartItems';
+import styles from './page.module.css';
 
 export default function Cart() {
   return (
-    <div>
-      Cart Page
+    <div className={styles.cartWrapper}>
+      My Cart
       <CartItems />
     </div>
   );
