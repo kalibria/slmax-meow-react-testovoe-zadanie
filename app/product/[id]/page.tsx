@@ -3,9 +3,7 @@ import { ProductInfo } from '@/app/types/types';
 import styles from './page.module.css';
 import AddToCartButton from '@/app/components/buttons/addToCartButton/AddToCartButton';
 
-export const revalidate = 0;
-// We don't need Full Route Cache (cached HTML). See https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
-export const dynamic = 'force-dynamic';
+export const revalidate = 10;
 
 export async function generateStaticParams() {
   const products: ProductInfo[] = await fetch(

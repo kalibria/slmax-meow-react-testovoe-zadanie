@@ -4,9 +4,9 @@ import { ProductInfo } from '@/app/types/types';
 import AddToCartButton from '@/app/components/buttons/addToCartButton/AddToCartButton';
 import AddIcon from '@/app/assets/icons/AddIcon';
 
-export const revalidate = 0;
-// We don't need Full Route Cache (cached HTML). See https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
-export const dynamic = 'force-dynamic';
+export const revalidate = 10;
+
+// export const dynamic = 'force-dynamic'; When using force-dynamic html, a page with a list of products will be generated every time a new user visits it, and not taken from the cache, so it will be inappropriate and will put a large load on the server. That's why I use force-dynamic only on the cart page, it is important for the user to see relevant information at the moment.
 
 export default async function Home() {
   const products: ProductInfo[] = await fetch(
