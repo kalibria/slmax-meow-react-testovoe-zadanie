@@ -14,9 +14,9 @@ export default function CardForCart({ product }: Props) {
         <Image src={product.img} width={150} height={150} alt={product.name} />
       </div>
       <div className={styles.infoWrapper}>
+        <p className={styles.text}>{product.name} </p>
         <IncreaseDecreaseItem product={product} />
         <div>{product.price} $</div>
-        <div>{product.name} </div>
       </div>
     </div>
   );

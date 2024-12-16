@@ -3,7 +3,7 @@ import { ProductInfo } from '@/app/types/types';
 import styles from './page.module.css';
 import AddToCartButton from '@/app/components/buttons/addToCartButton/AddToCartButton';
 
-export const revalidate = 60;
+export const revalidate = 10;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
@@ -11,7 +11,7 @@ export async function generateStaticParams() {
     'https://675bfd5f9ce247eb19382074.mockapi.io/api/products'
   ).then((res) => res.json());
 
-  return products.map((product) => ({
+  return products.slice(0, 25).map((product) => ({
     id: String(product.id),
   }));
 }
@@ -24,10 +24,7 @@ export default async function Page({
   const id = (await params).id;
 
   const product: ProductInfo = await fetch(
-    `https://675bfd5f9ce247eb19382074.mockapi.io/api/products/${id}`,
-    {
-      method: 'GET',
-    }
+    `https://675bfd5f9ce247eb19382074.mockapi.io/api/products/${id}`
   )
     .then((res) => res.json())
     .catch((error) => console.log(error));

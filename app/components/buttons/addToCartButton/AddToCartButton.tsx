@@ -24,7 +24,9 @@ export default function AddToCartButton({
 }: Props) {
   const addToCart = async (product: ProductInfo) => {
     const cartItems = await getItemsAction();
-    const productInCart = cartItems.find((item) => item.id === product.id);
+    const productInCart = cartItems.products.find(
+      (item) => item.id === product.id
+    );
 
     if (productInCart === undefined) {
       const productWithQuantity: CartItem = { ...product, quantity: 1 };

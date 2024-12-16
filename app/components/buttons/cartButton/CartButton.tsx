@@ -10,7 +10,7 @@ export default async function CartButton() {
       <Link href={`/cart`}>
         <CartIcon />
       </Link>
-      <span>{cartProducts.length}</span>
+      <span>{cartProducts.products.length}</span>
     </div>
   );
 }

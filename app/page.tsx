@@ -4,7 +4,7 @@ import { ProductInfo } from '@/app/types/types';
 import AddToCartButton from '@/app/components/buttons/addToCartButton/AddToCartButton';
 import AddIcon from '@/app/assets/icons/AddIcon';
 
-export const revalidate = 60;
+export const revalidate = 10;
 
 export default async function Home() {
   const products: ProductInfo[] = await fetch(

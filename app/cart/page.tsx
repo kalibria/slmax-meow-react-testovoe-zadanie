@@ -1,15 +1,16 @@
 import styles from './page.module.css';
 import CartItems from '@/app/cart/cartItems/CartItems';
-import { getTotalAction } from '@/app/actions/actions';
+import { getItemsAction } from '@/app/actions/actions';
 
 export default async function Cart() {
-  const totalCount = await getTotalAction();
+  const cartInfo = await getItemsAction();
+
   return (
     <div className={styles.cartWrapper}>
       My Cart
       <CartItems />
       <br />
-      <div>Total: {totalCount}</div>
+      <div>Total: {cartInfo.total} $</div>
     </div>
   );
 }

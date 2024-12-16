@@ -1,5 +1,5 @@
-import { CartItem } from '@/app/types/types';
+import { CartInfo } from '@/app/types/types';
 
 declare global {
-  var backendCart: CartItem[];
+  var backendCart: CartInfo;
 }

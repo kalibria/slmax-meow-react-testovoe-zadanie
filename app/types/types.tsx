@@ -9,3 +9,8 @@ export interface ProductInfo {
 export interface CartItem extends ProductInfo {
   quantity: number;
 }
+
+export interface CartInfo {
+  products: CartItem[];
+  total: number;
+}
