@@ -8,7 +8,7 @@ export async function getData(id: string): Promise<ProductInfo> {
     .catch((err) => console.log(err));
 }
 
-export async function getUpdatedItems() {
+export async function getUpdatedCartItems() {
   const cartItemsIds = globalThis.backendCart.products.reduce<string[]>(
     (accum, cartItem) => {
       accum.push(cartItem.id);
@@ -16,6 +16,6 @@ export async function getUpdatedItems() {
     },
     []
   );
-  const promises = cartItemsIds.map(async (id) => await getData(id));
+  const promises = cartItemsIds.map(async (id) => getData(id));
   return await Promise.all(promises);
 }

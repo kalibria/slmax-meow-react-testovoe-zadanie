@@ -2,13 +2,13 @@
 
 import { CartInfo, CartItem } from '@/app/types/types';
 import { revalidatePath } from 'next/cache';
-import { getUpdatedItems } from '@/app/utils/utils';
+import { getUpdatedCartItems } from '@/app/utils/utils';
 
 globalThis.backendCart = { products: [], total: 0 };
 
-export async function getItemsAction(): Promise<CartInfo> {
+export async function getCartItemsAction(): Promise<CartInfo> {
   await updateCartItems();
-  await getTotalAction();
+  await updateTotalAction();
   return globalThis.backendCart;
 }
 
@@ -51,18 +51,21 @@ export async function decreaseQuantityAction(item: CartItem) {
   revalidatePath('/cart');
 }
 
-export async function getTotalAction() {
-  const globalThis = await getItemsAction();
-  globalThis.total = globalThis.products.reduce((accum, item) => {
-    accum += +item.price * item.quantity;
-    return accum;
-  }, 0);
+export async function updateTotalAction() {
+  // const cartItems = await getCartItemsAction();
+  globalThis.backendCart.total = globalThis.backendCart.products.reduce(
+    (accum, item) => {
+      accum += +item.price * item.quantity;
+      return accum;
+    },
+    0
+  );
 
   revalidatePath('/cart');
 }
 
 export async function updateCartItems() {
-  const updatedItems = await getUpdatedItems();
+  const updatedItems = await getUpdatedCartItems();
   globalThis.backendCart.products = globalThis.backendCart.products.reduce(
     (accum: CartItem[], cartItem) => {
       const updatedItem = updatedItems.find((item) => item.id === cartItem.id);

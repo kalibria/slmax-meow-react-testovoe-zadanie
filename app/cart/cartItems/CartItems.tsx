@@ -1,9 +1,9 @@
-import { getItemsAction } from '@/app/actions/actions';
+import { getCartItemsAction } from '@/app/actions/actions';
 import CardForCart from '@/app/components/card/cardForCart/CardForCart';
 import styles from './cartItems.module.css';
 
 export default async function CartItems() {
-  const cartInfo = await getItemsAction();
+  const cartInfo = await getCartItemsAction();
   const cartItemsComponent = cartInfo.products.map((item) => (
     <CardForCart key={item.id} product={item} />
   ));

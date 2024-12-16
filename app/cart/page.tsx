@@ -1,9 +1,10 @@
 import styles from './page.module.css';
 import CartItems from '@/app/cart/cartItems/CartItems';
-import { getItemsAction } from '@/app/actions/actions';
+import { getCartItemsAction } from '@/app/actions/actions';
 
 export default async function Cart() {
-  const cartInfo = await getItemsAction();
+  await getCartItemsAction();
+  const cartInfo = await getCartItemsAction();
 
   return (
     <div className={styles.cartWrapper}>

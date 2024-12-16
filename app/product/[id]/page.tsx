@@ -8,7 +8,8 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const products: ProductInfo[] = await fetch(
-    'https://675bfd5f9ce247eb19382074.mockapi.io/api/products'
+    'https://675bfd5f9ce247eb19382074.mockapi.io/api/products',
+    { cache: 'no-store' }
   ).then((res) => res.json());
 
   return products.slice(0, 25).map((product) => ({

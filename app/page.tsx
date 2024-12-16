@@ -9,9 +9,7 @@ export const revalidate = 10;
 export default async function Home() {
   const products: ProductInfo[] = await fetch(
     'https://675bfd5f9ce247eb19382074.mockapi.io/api/products',
-    {
-      headers: { 'content-type': 'application/json' },
-    }
+    { cache: 'no-store', headers: { 'content-type': 'application/json' } }
   )
     .then((res) => res.json())
     .catch((error) => console.log(error));

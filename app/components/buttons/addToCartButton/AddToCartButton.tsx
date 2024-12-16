@@ -4,7 +4,7 @@ import { CartItem, ProductInfo } from '@/app/types/types';
 import Button from '@/app/components/buttons/generalButton/Button';
 import {
   addItemAction,
-  getItemsAction,
+  getCartItemsAction,
   incrementItemAction,
 } from '@/app/actions/actions';
 import { ReactNode } from 'react';
@@ -23,7 +23,7 @@ export default function AddToCartButton({
   className,
 }: Props) {
   const addToCart = async (product: ProductInfo) => {
-    const cartItems = await getItemsAction();
+    const cartItems = await getCartItemsAction();
     const productInCart = cartItems.products.find(
       (item) => item.id === product.id
     );

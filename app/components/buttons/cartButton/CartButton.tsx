@@ -1,9 +1,9 @@
 import CartIcon from '@/app/assets/icons/CartIcon';
 import Link from 'next/link';
-import { getItemsAction } from '@/app/actions/actions';
+import { getCartItemsAction } from '@/app/actions/actions';
 
 export default async function CartButton() {
-  const cartProducts = await getItemsAction();
+  const cartProducts = await getCartItemsAction();
 
   return (
     <div>
