@@ -52,7 +52,6 @@ export async function decreaseQuantityAction(item: CartItem) {
 }
 
 export async function updateTotalAction() {
-  // const cartItems = await getCartItemsAction();
   globalThis.backendCart.total = globalThis.backendCart.products.reduce(
     (accum, item) => {
       accum += +item.price * item.quantity;
